@@ -2,91 +2,72 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import networkx as nx
+from .State import State
+from matplotlib.ticker import ScalarFormatter # 导入 ScalarFormatter
 
-def plot_probability_curves(prob_matrix, times):
-    """
-    Plot probability distribution over time for each node.
-    Args:
-        prob_matrix (np.ndarray): N x T matrix of probabilities |\alpha_i(t)|^2
-        times (np.ndarray): Array of time points
-    """
-    n_nodes = prob_matrix.shape[0]
-    for i in range(n_nodes):
-        plt.plot(times, prob_matrix[i], label=f'Node {i}')
-    plt.xlabel('Time (t)')
-    plt.ylabel('Probability |\alpha_i(t)|^2')
-    plt.title('Probability Evolution Over Time')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
 
-def plot_state_distribution(prob_array, title="Quantum State Probability Distribution", 
-                           xlabel="Node Index", ylabel="Probability |\u03B1_i|^2"):
-    """
-    Plot the probability distribution of a quantum state across nodes as a bar plot.
+line_styles = [
+    (0, (1000, 1)),      # 实线 (非常长的实线段，几乎是连续的)
+    (0, (1, 1)),         # 极细的点线 (类似于 :)
+    (0, (5, 5, 5)),      # 更细的点线
+    (0, (3, 5, 1, 5)),   # 点划线 (类似于 -.)
+    (0, (6, 2, 2, 2)),   # 自定义：长虚线后跟小点
+    (0, (5, 1)),         # 密集点划线 (短实线后跟短间隔)
+    (0, (1, 5)),         # 稀疏点线 (短点后跟长间隔)
+    (0, (10, 0)),        # 粗实线 (理论上就是纯实线，因为间隔为0)
+    (0, (3, 1, 1, 1)),   # 虚线点线 (短虚线，点，短虚线，点...)
+    (0, (2, 2, 5, 2))    # 自定义：短虚线，短间隔，长虚线，短间隔
+]
+
+colors = [
+    'blue',
+    'red',
+    'green',
+    'purple',
+    'orange',
+    'cyan',
+    'magenta',
+    'lime',     # 亮绿色
+    'gold',     # 金色
+    'teal'      # 青色/蓝绿色
+]
+
+def timeCurve(target_state: np.ndarray, times: list, markNodes: list):
+    fig, ax = plt.subplots(figsize=(10,8*0.9))
+    for i, node_index in enumerate(markNodes):
+        ax.plot(times, target_state[:, i],
+             label=f'Node {node_index}',
+             color=colors[i],
+             linestyle=line_styles[i],
+             linewidth = 3) # You can adjust markersize as needed
+    # ax.set_title(f"Graph N = {N}", fontsize = 22)
+    ax.set_xlabel("Time", fontsize = 20)
+    ax.set_ylabel("Probability", fontsize = 20)
+    ax.tick_params(axis='y', labelsize=15) 
+    ax.tick_params(axis='x', labelsize=15)
+    ax.legend(fontsize = 20)
+    return fig,ax
+
+def probDistribution(stator: State):
+    probs = stator.getProbabilities()**2
+    N = len(probs)
+    fig, ax = plt.subplots(figsize=(10,8*0.9))
+    sns.barplot(x=np.arange(len(probs)), y=probs, color='#5275D6',ax = ax)
+    ax.set_title(f"Graph N = {N}", fontsize = 22)
+    ax.set_xlabel("Nodes", fontsize = 20)
+    ax.set_ylabel("Probability",fontsize = 20)
+
+    desired_x_ticks = np.arange(0, len(probs), len(probs)//10) # Indices for the ticks you want to show
+    desired_x_labels = [str(i) for i in desired_x_ticks] # Corresponding labels
+
+    ax.set_xticks(desired_x_ticks, desired_x_labels, fontsize = 15) # Set custom ticks and labels
+    formatter = ScalarFormatter(useOffset=False, useMathText=True)
+    # 启用科学计数法
+    formatter.set_scientific(True)
+    # 设置科学计数法的指数范围，scilimits=(0,0) 表示所有数字都使用科学计数法
+    formatter.set_powerlimits((0, 0)) 
     
-    Args:
-        prob_array (np.ndarray): Array of probabilities |\alpha_i|^2 for each node.
-        title (str, optional): Title of the plot. Defaults to "Quantum State Probability Distribution".
-        xlabel (str, optional): Label for x-axis. Defaults to "Node Index".
-        ylabel (str, optional): Label for y-axis. Defaults to "Probability |\u03B1_i|^2".
-    """
-
-    
-    plt.figure(figsize=(10, 6))
-    sns.barplot(prob_array)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.title(title)
-    plt.grid(True, linestyle='--', alpha=0.7)
-    plt.tight_layout()
-    plt.show()
-
-def plot_state_probability(prob_array, title="Quantum State Probability Distribution", 
-                          xlabel="Node Index", ylabel="Probability |\u03B1_i|^2"):
-    """
-    Plot the probability distribution of a quantum state across nodes as a curve.
-    
-    Args:
-        prob_array (np.ndarray): Array of probabilities |\alpha_i|^2 for each node.
-        title (str, optional): Title of the plot. Defaults to "Quantum State Probability Distribution".
-        xlabel (str, optional): Label for x-axis. Defaults to "Node Index".
-        ylabel (str, optional): Label for y-axis. Defaults to "Probability |\u03B1_i|^2".
-    """
-    n_nodes = len(prob_array)
-    indices = np.arange(n_nodes)
-    
-    plt.figure(figsize=(10, 6))
-    sns.lineplot(x=indices, y=prob_array, color='blue', linewidth=2, marker='o')
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.title(title)
-    plt.grid(True, linestyle='--', alpha=0.7)
-    plt.tight_layout()
-    plt.show()
-
-def plot_graph_probability(adj_matrix, probs, title=''):
-    """
-    Plot graph with node sizes proportional to probabilities.
-    Args:
-        adj_matrix (np.ndarray): N x N adjacency matrix
-        probs (np.ndarray): Probability vector of length N
-        title (str): Plot title
-    """
-    G = nx.from_numpy_array(adj_matrix)
-    pos = nx.spring_layout(G)
-    nx.draw(G, pos, node_size=probs * 1000, node_color=probs, cmap='Blues', with_labels=True)
-    plt.title(title)
-    plt.show()
-
-
-# # Demo
-# n_nodes = 4
-# times = np.linspace(0, 2, 20)
-# prob_matrix = np.abs(np.random.rand(n_nodes, len(times))) ** 2  # Placeholder data
-# plot_probability_curves(prob_matrix, times)
-
-# n_nodes = 4
-# adj_matrix = np.array([[0, 1, 1, 0], [1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]])
-# probs = np.abs(np.random.rand(n_nodes)) ** 2  # Placeholder data
-# plot_graph_probability(adj_matrix, probs, 'Graph Probability at t=0')
+    # 将 Y 轴的主要刻度格式化器设置为我们创建的 ScalarFormatter
+    ax.yaxis.set_major_formatter(formatter)
+    ax.tick_params(axis='y', labelsize=15) 
+    return fig,ax

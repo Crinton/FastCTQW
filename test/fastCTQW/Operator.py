@@ -1,6 +1,6 @@
 import numpy as np
 import networkx as nx
-from numpy.typing import ArrayLike, NDArray
+from numpy.typing import  NDArray
 from .fastexpm import ExpMatComplex64, ExpMatComplex128
 from scipy.linalg import expm
 type AdjMat = NDArray[np.float32 | np.float64]
