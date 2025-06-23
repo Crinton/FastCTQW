@@ -92,10 +92,6 @@ class Ctqw:
     def runWalk(
             self,
             time: float = 0):
-        """
-        每次runWalk都重新计算一次expm, 结果存储在self._finalStator中
-        """    
-        
         self._Operator.buildExpmOperator(time)
         self._finalStator.setState(self._Operator.getOperator() @ self._initStator.getState())
         
