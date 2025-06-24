@@ -88,3 +88,4 @@ test/fastexpm_old/__init__.py
 test/fastexpm_old/_wrapper.py
 tests/conftest.py
 tests/test_fastexpm_accuracy.py
+tests/test_fastexpm_perf.py

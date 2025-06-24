@@ -89,6 +89,7 @@ def test_AdjMatComplete_Accuracy(N: int, dtype, request):
         expMator = ExpMatComplex128(N)
     eA = matrix_exp_taylor(A,m = 100)
     my_eA = expMator.run(A).reshape(N,N)
+    expMator.free()
     error_matrix = eA - my_eA
     l2_norm = np.linalg.norm(eA-my_eA)
     l_inf_norm = np.linalg.norm(eA - my_eA, ord = np.inf)
@@ -115,6 +116,34 @@ def test_AdjMatER_Accuracy(N: int, dtype, request):
         expMator = ExpMatComplex128(N)
     eA = matrix_exp_taylor(A,m = 100)
     my_eA = expMator.run(A).reshape(N,N)
+    expMator.free()
+    error_matrix = eA - my_eA
+    l2_norm = np.linalg.norm(eA-my_eA)
+    l_inf_norm = np.linalg.norm(eA - my_eA, ord = np.inf)
+    max_norm = np.max(np.abs(error_matrix))
+    print(f"Adjacency Matrix of ER N = {N}, dtype = {dtype}: ")
+    print(f"  L2 Norm (Frobenius): {l2_norm:.4e}")
+    print(f"  L_inf Norm (Max Row Sum): {l_inf_norm:.4e}")
+    print(f"  Max Norm (Element-wise): {max_norm:.4e}")
+    eA_l2_norm = np.linalg.norm(eA, ord='fro')
+    if eA_l2_norm > 1e-15:
+        relative_l2_error = l2_norm / eA_l2_norm
+        print(f"  Relative L2 Error: {relative_l2_error:.4e}")
+    else:
+        print("  Relative L2 Error: Cannot calculate (reference L2 norm is too small)")
+        
+def test_AdjMatR4_Accuracy(N: int, dtype, request):
+    if dtype is np.complex64:
+        G = nx.random_regular_graph(d = 4, n = N)
+        A = 1j*nx.to_numpy_array(G, dtype = np.complex64)
+        expMator = ExpMatComplex64(N)
+    elif dtype is np.complex128:
+        G = nx.random_regular_graph(d = 4, n = N)
+        A = 1j*nx.to_numpy_array(G, dtype = np.complex128)
+        expMator = ExpMatComplex128(N)
+    eA = matrix_exp_taylor(A,m = 100)
+    my_eA = expMator.run(A).reshape(N,N)
+    expMator.free()
     error_matrix = eA - my_eA
     l2_norm = np.linalg.norm(eA-my_eA)
     l_inf_norm = np.linalg.norm(eA - my_eA, ord = np.inf)

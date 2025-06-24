@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/_fastexpm_core.dir/src/main.cu.o"
   "CMakeFiles/_fastexpm_core.dir/src/main.cu.o.d"
-  "_fastexpm_core.cpython-313-x86_64-linux-gnu.so"
+  "_fastexpm_core.cpython-310-x86_64-linux-gnu.so"
   "_fastexpm_core.pdb"
 )
 

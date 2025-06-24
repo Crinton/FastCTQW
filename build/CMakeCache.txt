@@ -274,7 +274,7 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a file.
-CUDAToolkit_CUPTI_INCLUDE_DIR:PATH=/usr/local/cuda/targets/x86_64-linux/include/../../../extras/CUPTI/include
+CUDAToolkit_CUPTI_INCLUDE_DIR:PATH=/usr/local/cuda/extras/CUPTI/include
 
 //Path to a library.
 CUDAToolkit_rt_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a
@@ -529,7 +529,7 @@ PYBIND11_TEST:BOOL=OFF
 PYBIND11_USE_CROSSCOMPILING:BOOL=OFF
 
 //Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=/home/hxy/anaconda3/envs/QWAK_env/bin/python3.13
+PYTHON_EXECUTABLE:FILEPATH=/home/hxy/anaconda3/envs/py_310/bin/python
 
 //Path to a library.
 PYTHON_LIBRARY:FILEPATH=/home/hxy/anaconda3/envs/QWAK_env/lib/libpython3.13.so
@@ -883,11 +883,11 @@ CUDA_pcsamplingutil_LIBRARY-ADVANCED:INTERNAL=1
 //Details about finding CUDAToolkit
 FIND_PACKAGE_MESSAGE_DETAILS_CUDAToolkit:INTERNAL=[/usr/local/cuda/targets/x86_64-linux/include][/usr/local/cuda/lib64/libcudart.so][/usr/local/cuda/bin][v12.2.91()]
 //Details about finding PYTHON
-FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/home/hxy/anaconda3/envs/QWAK_env/bin/python3.133.13.2
+FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/home/hxy/anaconda3/envs/py_310/bin/python3.10.16
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/home/hxy/anaconda3/envs/QWAK_env/bin/python3.13][cfound components: Interpreter ][v3.13.2()]
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/home/hxy/anaconda3/envs/QWAK_env/bin/python3.13][v3.13.2(3.7)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/home/hxy/anaconda3/envs/py_310/bin/python][v3.10.16(3.7)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Test HAS_FLTO
@@ -895,17 +895,17 @@ HAS_FLTO:INTERNAL=1
 PYBIND11_INCLUDE_DIR:INTERNAL=/home/hxy/expm/pade/CTQW_project/FastCTQW_project/pybind11/include
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
-PYTHON_INCLUDE_DIRS:INTERNAL=/home/hxy/anaconda3/envs/QWAK_env/include/python3.13
+PYTHON_INCLUDE_DIRS:INTERNAL=/home/hxy/anaconda3/envs/py_310/include/python3.10
 PYTHON_IS_DEBUG:INTERNAL=0
 PYTHON_LIBRARIES:INTERNAL=/home/hxy/anaconda3/envs/QWAK_env/lib/libpython3.13.so
 //ADVANCED property for variable: PYTHON_LIBRARY
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
 PYTHON_MODULE_DEBUG_POSTFIX:INTERNAL=
-PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-313-x86_64-linux-gnu.so
+PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-310-x86_64-linux-gnu.so
 PYTHON_MODULE_PREFIX:INTERNAL=
-PYTHON_VERSION:INTERNAL=3.13.2
+PYTHON_VERSION:INTERNAL=3.10.16
 PYTHON_VERSION_MAJOR:INTERNAL=3
-PYTHON_VERSION_MINOR:INTERNAL=13
+PYTHON_VERSION_MINOR:INTERNAL=10
 Python_ADDITIONAL_VERSIONS:INTERNAL=3.12;3.11;3.10;3.9;3.8;3.7
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
@@ -929,5 +929,5 @@ pybind11_FOUND:INTERNAL=TRUE
 //Directory where pybind11 headers are located
 pybind11_INCLUDE_DIR:INTERNAL=/home/hxy/expm/pade/CTQW_project/FastCTQW_project/pybind11/include
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/home/hxy/expm/pade/CTQW_project/FastCTQW_project/pybind11/include;/home/hxy/anaconda3/envs/QWAK_env/include/python3.13
+pybind11_INCLUDE_DIRS:INTERNAL=/home/hxy/expm/pade/CTQW_project/FastCTQW_project/pybind11/include;/home/hxy/anaconda3/envs/py_310/include/python3.10
 

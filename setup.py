@@ -140,7 +140,6 @@ setup(
     },
     include_package_data=True, # 确保 package_data 中指定的文件被包含进来
 
-    # 包的分类器，帮助用户在 PyPI 上发现你的包
     classifiers=[
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8',

@@ -196,19 +196,10 @@ CMakeFiles/_fastexpm_core.dir/src/main.cu.o : /home/hxy/expm/pade/CTQW_project/F
     /home/hxy/expm/pade/CTQW_project/FastCTQW_project/pybind11/include/pybind11/detail/class.h \
     /home/hxy/expm/pade/CTQW_project/FastCTQW_project/pybind11/include/pybind11/attr.h \
     /home/hxy/expm/pade/CTQW_project/FastCTQW_project/pybind11/include/pybind11/detail/common.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/Python.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/patchlevel.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pyconfig.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pymacconfig.h \
-    /usr/include/inttypes.h \
-    /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h \
-    /usr/include/stdint.h \
-    /usr/include/x86_64-linux-gnu/bits/wchar.h \
-    /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-    /usr/include/wchar.h \
-    /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-    /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-    /usr/include/x86_64-linux-gnu/bits/wchar2.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/Python.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/patchlevel.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pyconfig.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pymacconfig.h \
     /usr/include/errno.h \
     /usr/include/x86_64-linux-gnu/bits/errno.h \
     /usr/include/linux/errno.h \
@@ -216,7 +207,6 @@ CMakeFiles/_fastexpm_core.dir/src/main.cu.o : /home/hxy/expm/pade/CTQW_project/F
     /usr/include/asm-generic/errno.h \
     /usr/include/asm-generic/errno-base.h \
     /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-    /usr/include/ctype.h \
     /usr/include/unistd.h \
     /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
     /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -225,125 +215,13 @@ CMakeFiles/_fastexpm_core.dir/src/main.cu.o : /home/hxy/expm/pade/CTQW_project/F
     /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
     /usr/include/x86_64-linux-gnu/bits/unistd.h \
     /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pyport.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/exports.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pymacro.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pymath.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pymem.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pymem.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pytypedefs.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pybuffer.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pystats.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pyatomic.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pyatomic.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pyatomic_gcc.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/lock.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/lock.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/object.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/object.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/objimpl.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/objimpl.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/typeslots.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pyhash.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pyhash.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pydebug.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/bytearrayobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/bytearrayobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/bytesobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/bytesobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/unicodeobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/unicodeobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pyerrors.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pyerrors.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/longobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/longobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/longintrepr.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/boolobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/floatobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/floatobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/complexobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/complexobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/rangeobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/memoryobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/memoryobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/tupleobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/tupleobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/listobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/listobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/dictobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/dictobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/odictobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/enumobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/setobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/setobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/methodobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/methodobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/moduleobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/monitoring.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/monitoring.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/funcobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/classobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/fileobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/fileobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pycapsule.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/code.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pyframe.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pyframe.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/traceback.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/traceback.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/sliceobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/cellobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/iterobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/initconfig.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pystate.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pystate.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/genobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/descrobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/descrobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/genericaliasobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/warnings.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/warnings.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/weakrefobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/weakrefobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/structseq.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/picklebufobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pytime.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/codecs.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pythread.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pythread.h \
-    /usr/include/pthread.h \
-    /usr/include/sched.h \
-    /usr/include/x86_64-linux-gnu/bits/sched.h \
-    /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-    /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-    /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-    /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/context.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/modsupport.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/modsupport.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/compile.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/compile.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pythonrun.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pythonrun.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pylifecycle.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pylifecycle.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/ceval.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/ceval.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/sysmodule.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/sysmodule.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/osmodule.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/intrcheck.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/import.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/import.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/abstract.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/abstract.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/bltinmodule.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/critical_section.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/critical_section.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pyctype.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pystrtod.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/pystrcmp.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/fileutils.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pyport.h \
+    /usr/include/inttypes.h \
+    /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h \
+    /usr/include/stdint.h \
+    /usr/include/x86_64-linux-gnu/bits/wchar.h \
+    /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+    /usr/include/x86_64-linux-gnu/sys/time.h \
     /usr/include/x86_64-linux-gnu/sys/stat.h \
     /usr/include/x86_64-linux-gnu/bits/stat.h \
     /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
@@ -363,11 +241,113 @@ CMakeFiles/_fastexpm_core.dir/src/main.cu.o : /home/hxy/expm/pade/CTQW_project/F
     /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
     /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
     /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/fileutils.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/pyfpe.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/tracemalloc.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/frameobject.h \
-    /home/hxy/anaconda3/envs/QWAK_env/include/python3.13/cpython/frameobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/exports.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pymacro.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pymath.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pymem.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/pymem.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/object.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/object.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/objimpl.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/objimpl.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/typeslots.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pyhash.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/pydebug.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/bytearrayobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/bytearrayobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/bytesobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/bytesobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/unicodeobject.h \
+    /usr/include/ctype.h \
+    /usr/include/wchar.h \
+    /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+    /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+    /usr/include/x86_64-linux-gnu/bits/wchar2.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/unicodeobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/longobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/longintrepr.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/boolobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/floatobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/complexobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/rangeobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/memoryobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/tupleobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/tupleobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/listobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/listobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/dictobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/dictobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/odictobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/enumobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/setobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/methodobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/methodobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/moduleobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/funcobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/classobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/fileobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/fileobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pycapsule.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/code.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/code.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pyframe.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/traceback.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/traceback.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/sliceobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cellobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/iterobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/initconfig.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/genobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pystate.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/pystate.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/abstract.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/abstract.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/descrobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/genericaliasobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/warnings.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/weakrefobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/structseq.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/namespaceobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/picklebufobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/pytime.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/codecs.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pyerrors.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/pyerrors.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pythread.h \
+    /usr/include/pthread.h \
+    /usr/include/sched.h \
+    /usr/include/x86_64-linux-gnu/bits/sched.h \
+    /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+    /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+    /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+    /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/context.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/modsupport.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/compile.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/compile.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pythonrun.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/pythonrun.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pylifecycle.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/pylifecycle.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/ceval.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/ceval.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/sysmodule.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/sysmodule.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/osmodule.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/intrcheck.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/import.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/import.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/bltinmodule.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/eval.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/pyctype.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pystrtod.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/pystrcmp.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/fileutils.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/fileutils.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/pyfpe.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/tracemalloc.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/frameobject.h \
+    /home/hxy/anaconda3/envs/py_310/include/python3.10/cpython/frameobject.h \
     /usr/include/c++/10/cstddef \
     /usr/include/c++/10/cstring \
     /usr/include/c++/10/forward_list \

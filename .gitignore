@@ -1,0 +1,3 @@
+cmake_command.sh
+./test
+./build
