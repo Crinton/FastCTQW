@@ -1,8 +1,8 @@
-# Install script for directory: /home/hxy/expm/pade/v8_relase/pybind11
+# Install script for directory: /home/hxy/expm/pade/CTQW_project/FastCTQW_project/pybind11
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hxy/expm/pade/v8_relase/test/fastCTQW/fastexpm")
+  set(CMAKE_INSTALL_PREFIX "/home/hxy/expm/pade/CTQW_project/FastCTQW_project/build/bdist.linux-x86_64/wheel/FastCTQW/fastexpm")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()

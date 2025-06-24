@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: FastCTQW
+Version: 0.1.0
+Summary: A fast quantum walk package with CUDA acceleration.
+Home-page: https://github.com/Crinton/FastCTQW.git
+Author: Xiangyang He
+Author-email: Xiangyang He <hexiangyangcs@126.com>
+Project-URL: Homepage, https://github.com/Crinton/FastCTQW.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Quantum
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.20
+Requires-Dist: networkx>=3.0
+Requires-Dist: scipy>=1.14
+Requires-Dist: matplotlib>=3.5.0
+Requires-Dist: seaborn>=0.11.0
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# My Awesome Project
+This is the initial setup for my project.

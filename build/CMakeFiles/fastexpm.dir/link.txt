@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC -flto -shared  -o fastexpm.cpython-313-x86_64-linux-gnu.so @CMakeFiles/fastexpm.dir/objects1.rsp @CMakeFiles/fastexpm.dir/linkLibs.rsp -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib"

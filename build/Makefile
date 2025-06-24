@@ -57,10 +57,10 @@ RM = /home/hxy/app/cmake-3.30.2-linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hxy/expm/pade/v8_relase
+CMAKE_SOURCE_DIR = /home/hxy/expm/pade/CTQW_project/FastCTQW_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hxy/expm/pade/v8_relase/build
+CMAKE_BINARY_DIR = /home/hxy/expm/pade/CTQW_project/FastCTQW_project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxy/expm/pade/v8_relase/build/CMakeFiles /home/hxy/expm/pade/v8_relase/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxy/expm/pade/CTQW_project/FastCTQW_project/build/CMakeFiles /home/hxy/expm/pade/CTQW_project/FastCTQW_project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxy/expm/pade/v8_relase/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxy/expm/pade/CTQW_project/FastCTQW_project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -162,48 +162,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fastexpm
+# Target rules for targets named _fastexpm_core
 
 # Build rule for target.
-fastexpm: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fastexpm
-.PHONY : fastexpm
+_fastexpm_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _fastexpm_core
+.PHONY : _fastexpm_core
 
 # fast build rule for target.
-fastexpm/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/build
-.PHONY : fastexpm/fast
-
-src/cuapi.o: src/cuapi.cu.o
-.PHONY : src/cuapi.o
-
-# target to build an object file
-src/cuapi.cu.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/src/cuapi.cu.o
-.PHONY : src/cuapi.cu.o
-
-src/cuapi.i: src/cuapi.cu.i
-.PHONY : src/cuapi.i
-
-# target to preprocess a source file
-src/cuapi.cu.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/src/cuapi.cu.i
-.PHONY : src/cuapi.cu.i
-
-src/cuapi.s: src/cuapi.cu.s
-.PHONY : src/cuapi.s
-
-# target to generate assembly for a file
-src/cuapi.cu.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/src/cuapi.cu.s
-.PHONY : src/cuapi.cu.s
+_fastexpm_core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_fastexpm_core.dir/build.make CMakeFiles/_fastexpm_core.dir/build
+.PHONY : _fastexpm_core/fast
 
 src/main.o: src/main.cu.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cu.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/src/main.cu.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_fastexpm_core.dir/build.make CMakeFiles/_fastexpm_core.dir/src/main.cu.o
 .PHONY : src/main.cu.o
 
 src/main.i: src/main.cu.i
@@ -211,7 +187,7 @@ src/main.i: src/main.cu.i
 
 # target to preprocess a source file
 src/main.cu.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/src/main.cu.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_fastexpm_core.dir/build.make CMakeFiles/_fastexpm_core.dir/src/main.cu.i
 .PHONY : src/main.cu.i
 
 src/main.s: src/main.cu.s
@@ -219,32 +195,8 @@ src/main.s: src/main.cu.s
 
 # target to generate assembly for a file
 src/main.cu.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/src/main.cu.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_fastexpm_core.dir/build.make CMakeFiles/_fastexpm_core.dir/src/main.cu.s
 .PHONY : src/main.cu.s
-
-src/matrix.o: src/matrix.cu.o
-.PHONY : src/matrix.o
-
-# target to build an object file
-src/matrix.cu.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/src/matrix.cu.o
-.PHONY : src/matrix.cu.o
-
-src/matrix.i: src/matrix.cu.i
-.PHONY : src/matrix.i
-
-# target to preprocess a source file
-src/matrix.cu.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/src/matrix.cu.i
-.PHONY : src/matrix.cu.i
-
-src/matrix.s: src/matrix.cu.s
-.PHONY : src/matrix.s
-
-# target to generate assembly for a file
-src/matrix.cu.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastexpm.dir/build.make CMakeFiles/fastexpm.dir/src/matrix.cu.s
-.PHONY : src/matrix.cu.s
 
 # Help Target
 help:
@@ -258,16 +210,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... fastexpm"
-	@echo "... src/cuapi.o"
-	@echo "... src/cuapi.i"
-	@echo "... src/cuapi.s"
+	@echo "... _fastexpm_core"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/matrix.o"
-	@echo "... src/matrix.i"
-	@echo "... src/matrix.s"
 .PHONY : help
 
 

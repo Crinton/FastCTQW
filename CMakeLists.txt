@@ -5,18 +5,23 @@ set(CMAKE_CXX_STANDARD 17) # pybind11 通常推荐 C++17 或更高版本以获�
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_CUDA_ARCHITECTURES 89)
 
-#set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -gencode arch=compute_89,code=sm_89")
 find_package(Python REQUIRED)
 find_package(CUDAToolkit REQUIRED)
 
 add_subdirectory(pybind11)
 
-file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c*)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
+# file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c*)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-pybind11_add_module(fastexpm  ${SRC})
+set(PYTHON_BINDING_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cu)
 
-target_link_libraries(fastexpm PRIVATE CUDA::cublas CUDA::cusolver)
-target_compile_options(fastexpm PRIVATE -O3)
 
-install(TARGETS fastexpm DESTINATION .)
+pybind11_add_module(_fastexpm_core ${PYTHON_BINDING_SRC})
+
+
+
+target_link_libraries(_fastexpm_core PRIVATE 
+                        ${CMAKE_CURRENT_SOURCE_DIR}/lib/libexpmcore.a
+                        CUDA::cublas CUDA::cusolver CUDA::cudart)
+target_compile_options(_fastexpm_core PRIVATE -O3 -fPIC)
+install(TARGETS _fastexpm_core DESTINATION .)

@@ -1,0 +1,44 @@
+
+[build-system]
+requires = ["setuptools>= 77.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "FastCTQW" # 注意：这个 name 应该与 setup.py 中的 name 字段一致
+version = "0.1.0" # 与 setup.py 中的 version 一致
+description = "A fast quantum walk package with CUDA acceleration."
+readme = "README.md"
+requires-python = ">=3.8"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Xiangyang He", email = "hexiangyangcs@126.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    'Topic :: Scientific/Engineering :: Physics',
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Quantum",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  'numpy>=1.20', 
+  'networkx>=3.0',
+  'scipy>=1.14',
+  'matplotlib>=3.5.0',
+  'seaborn>=0.11.0'
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Crinton/FastCTQW.git"
+#"Bug Tracker" = "https://github.com/yourusername/FastCTQW_Project/issues"
+
+# setuptools specific configuration
+[tool.setuptools.packages.find]
+where = ["."] # 告诉 setuptools 从当前目录查找包
+
+[tool.setuptools.package-data]
+"FastCTQW.fastexpm" = ["_fastexpm_core*.so"] # 匹配带有 ABI 标签的 .so 文件

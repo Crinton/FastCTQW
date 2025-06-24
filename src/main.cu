@@ -5,7 +5,7 @@ namespace py = pybind11;
 
 
 
-PYBIND11_MODULE(fastexpm, m) {
+PYBIND11_MODULE(_fastexpm_core, m) {
     m.doc() = "pybind11 example plugin for matrix exponential"; // 模块的文档字符串
 
     // 绑定expm_float函数到Python模块
