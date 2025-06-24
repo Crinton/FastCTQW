@@ -1,3 +1,5 @@
 cmake_command.sh
 /test
 /build
+/.pytest_cache
+/FastCTQW.egg-info

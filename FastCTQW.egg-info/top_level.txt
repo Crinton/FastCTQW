@@ -1,8 +1,0 @@
-FastCTQW
-build
-include
-lib
-pybind11
-src
-test
-tests
