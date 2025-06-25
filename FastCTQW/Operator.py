@@ -3,14 +3,13 @@ import networkx as nx
 from numpy.typing import NDArray
 from .fastexpm import ExpMatComplex64, ExpMatComplex128
 from scipy.linalg import expm
-type AdjMat = NDArray[np.float32 | np.float64]
 class Operator:
     """
     该类的目标是获取_expmOperator, 供CTQW进行 GEMV
     """
     def __init__(
         self,
-        data: AdjMat | int,
+        data: np.ndarray | int,
         gamma: float = 1,
         laplacian: bool = False,
         device: str = "cpu",
@@ -47,7 +46,7 @@ class Operator:
     def free(self):
         self._expMator.free()
 
-    def _buildHamiltonian(self, A: AdjMat, gamma: float) -> NDArray[np.complex64 | np.complex128]:
+    def _buildHamiltonian(self, A: np.ndarray, gamma: float) -> NDArray[np.complex64 | np.complex128]:
         if self._laplacian:
             return -gamma * np.asarray((np.diag(A.sum(axis = 1)) - A),dtype = self._dtype)
         else:
@@ -78,7 +77,7 @@ class Operator:
         elif self._device == "cuda":
             self._expmMat = self._expMator.run(self._buildUnitory(time))
     
-    def _is_adjacency_matrix(self, A:AdjMat) -> bool:
+    def _is_adjacency_matrix(self, A: np.ndarray) -> bool:
         if A.ndim != 2:
             print(f"Error: Matrix is not 2D. Dimensions: {A.ndim}")
             return False
@@ -109,7 +108,7 @@ class Operator:
         return cls(A, gamma, laplacian, device)
     
     @classmethod
-    def from_numpy_array(cls, A: AdjMat, gamma:float = 1,  laplacian: bool = False, device: str = "cpu") -> "Operator":
+    def from_numpy_array(cls, A: np.ndarray, gamma:float = 1,  laplacian: bool = False, device: str = "cpu") -> "Operator":
         return cls(A, gamma, laplacian, device)
     
     @classmethod
@@ -119,7 +118,7 @@ class Operator:
     @classmethod
     def from_num_nodes(cls, n: int, dtype: np.complex64 | np.complex128 = np.complex64):
         return cls(n, dtype)
-    def reset_numpy_array(self, A: AdjMat, gamma:float = 1, laplacian: bool = False):
+    def reset_numpy_array(self, A: np.ndarray, gamma:float = 1, laplacian: bool = False):
         """
         
         """

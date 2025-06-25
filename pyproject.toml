@@ -9,7 +9,7 @@ version = "0.1.0" # 与 setup.py 中的 version 一致
 description = "A fast quantum walk package with CUDA acceleration."
 readme = "README.md"
 requires-python = ">=3.8"
-license-files = ["LICENSE"]
+license = { file = "LICENSE" } 
 authors = [
   { name = "Xiangyang He", email = "hexiangyangcs@126.com" },
 ]

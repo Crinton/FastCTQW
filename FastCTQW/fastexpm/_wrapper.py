@@ -2,8 +2,6 @@ import numpy as np
 from numpy.typing import NDArray
 from typing import Annotated
 
-Matrix = NDArray[np.floating | np.integer]
-SquareMatrix = Annotated[Matrix, "A.shape[0] == A.shape[1]"]
 
 from . import _fastexpm_core 
 #  ExpMatFloat32, ExpMatFloat64, ExpMatComplex64, ExpMatComplex128 
@@ -28,7 +26,7 @@ class ExpMatFloat32:
         # 如果有异常发生，不吞掉它，保持向上传播
         return False
     
-    def run(self, A: SquareMatrix) -> np.ndarray:
+    def run(self, A) -> np.ndarray:
         if not isinstance(A, np.ndarray):
             raise TypeError("Input must be a NumPy array.")
         if A.shape != (self.N, self.N): # Assuming N is stored in the C++ object
@@ -59,7 +57,7 @@ class ExpMatFloat64:
         # 如果有异常发生，不吞掉它，保持向上传播
         return False
     
-    def run(self, A: SquareMatrix) -> np.ndarray:
+    def run(self, A) -> np.ndarray:
         if not isinstance(A, np.ndarray):
             raise TypeError("Input must be a NumPy array.")
         if A.shape != (self.N, self.N): # Assuming N is stored in the C++ object
@@ -89,7 +87,7 @@ class ExpMatComplex64:
         # 如果有异常发生，不吞掉它，保持向上传播
         return False
     
-    def run(self, A: SquareMatrix) -> np.ndarray:
+    def run(self, A) -> np.ndarray:
         if not isinstance(A, np.ndarray):
             raise TypeError("Input must be a NumPy array.")
         if A.shape != (self.N, self.N): # Assuming N is stored in the C++ object
@@ -120,7 +118,7 @@ class ExpMatComplex128:
         # 如果有异常发生，不吞掉它，保持向上传播
         return False
     
-    def run(self, A: SquareMatrix) -> np.ndarray:
+    def run(self, A) -> np.ndarray:
         if not isinstance(A, np.ndarray):
             raise TypeError("Input must be a NumPy array.")
         if A.shape != (self.N, self.N): # Assuming N is stored in the C++ object

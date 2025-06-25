@@ -1,18 +1,17 @@
 import numpy as np
 from numpy.typing import NDArray
-type QuantumState =  NDArray[np.complex64 | np.complex128]
 
 class State:
     def __init__(
             self,
-            initState: QuantumState
+            initState: np.ndarray
     ):
         if not self._isState(initState):
             raise ValueError("initState is not a quantum state")
         
         self._state = initState 
     
-    def _isState(self, state: QuantumState, tol = 1e-5) -> bool:
+    def _isState(self, state: np.ndarray, tol = 1e-5) -> bool:
         """
         检查是否是量子态
         """
@@ -48,15 +47,15 @@ class State:
             initial_state[i] = 1.0
         initial_state = initial_state/np.linalg.norm(initial_state)
         return cls(initial_state)
-    def getProbabilities(self) -> QuantumState:
+    def getProbabilities(self) -> np.ndarray:
         return np.abs(self._state)**2
     
-    def setState(self, initState: QuantumState) -> None:
+    def setState(self, initState: np.ndarray) -> None:
         if not self._isState(initState):
             raise ValueError("initState is not a quantum state")
         self._state = initState
     
-    def getState(self) -> QuantumState:
+    def getState(self) -> np.ndarray:
         return self._state
     
     

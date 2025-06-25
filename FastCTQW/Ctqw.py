@@ -2,13 +2,11 @@ import numpy as np
 import networkx as nx
 from .Operator import Operator
 from .State import State
-from numpy.typing import NDArray
-type AdjMat = NDArray[np.float32 | np.float64]
-type QuantumState =  NDArray[np.complex64 | np.complex128]
+
 class Ctqw:
     def __init__(
             self,
-            data: AdjMat | int,
+            data:  np.ndarray | int,
             initState:State, # amp向量 
             gamma: float = 1,
             laplacian: bool = False,
@@ -36,7 +34,7 @@ class Ctqw:
 
     @classmethod
     def from_numpy_array(cls, 
-                         A:AdjMat, 
+                         A: np.ndarray , 
                          initState:State, 
                          gamma: float = 1, 
                          laplacian: bool = False, 
@@ -75,7 +73,7 @@ class Ctqw:
     def from_num_nodes(cls, n: int, dtype: np.complex64 | np.complex128 = np.complex64, device = "cpu") -> "Ctqw":
         return cls(n, dtype, device = "cpu")
     
-    def reset_numpy_array(self, A: AdjMat,
+    def reset_numpy_array(self, A: np.ndarray,
             initState:State, # amp向量 
             gamma: float = 1,
             laplacian: bool = False):
