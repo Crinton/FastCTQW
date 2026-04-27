@@ -4,6 +4,8 @@ FastCTQW is a high-performance, GPU-accelerated Python package for simulating Co
 
 The package offers a user-friendly Python interface, allowing researchers and developers to quickly leverage its high performance within a Python environment. FastCTQW supports Python 3.10 or newer.
 
+
+The core code of the key computational library **fastexpm** has been updated to: https://github.com/Crinton/veloxpm
 ## Features
 
 - **User-Friendly Interface**: Provides an intuitive Python API for rapid development and validation of CTQW algorithms in virtual environments.
